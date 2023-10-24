@@ -1,6 +1,6 @@
+# MergeServer
 
-# MergeServer 
-This is a sql batch fucntion,help  synchronize data in batches, thereby reducing losses.
+This is a sql batch fucntion,help synchronize data in batches, thereby reducing losses.
 
 Now,we can support SQL Server batch operating,next time we will open PostgreSQL ,MySQL,and other ...
 
@@ -28,6 +28,7 @@ public class BatchOperate
 }
 
 ```
+
 ```C#
 public async Task CopyToServerTest()
   {
@@ -53,18 +54,19 @@ public async Task CopyToServerTest()
   }
 ```
 
-
 if you use PostgreSQL,such as :
+
 ```C#
 //if you use PostgreSQL database, config PostgresqlAsyncBulk service.
 services.AddTransient<IDbAsyncBulk, PostgresqlAsyncBulk>();
 ```
 
 and then,to instantiate service by dependency injection.
+
 ```C#
 private readonly IDbAsyncBulk _bulk;
 public MergeUnitController(IDbAsyncBulk bulk)
-{ 
+{
     _bulk = bulk;
 }
 ```
@@ -97,11 +99,15 @@ public async Task<IActionResult> CopyToServer()
 for PostgreSQL,some fileds type need to mapping,some pgsql data type, text[],integer[] and other.
 
 we could remark it by attribute,such as:
+
 ```C#
 [DbBulk(Type = NpgsqlTypes.NpgsqlDbType.Array | NpgsqlTypes.NpgsqlDbType.Text)]
 public string[] hobby { get; set; }
 [DbBulk(Type = NpgsqlTypes.NpgsqlDbType.Array | NpgsqlTypes.NpgsqlDbType.Integer)]
 public int[] courses { get; set; }
 ```
+
+test case:
+We use **100,000 data**, and the time consumed for batch insert is about **751 ms**, and the time consumed for new modification is **2851 ms** for the same amount of data.
 
 That's all.If you have any questions, please commit an issue.
