@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeServer.Core", "MergeServer.Core.csproj", "{3AAB1A5E-B613-4FB0-9A24-8E21BA1BC64C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeServer.Core", "MergeServer.Core.csproj", "{3AAB1A5E-B613-4FB0-9A24-8E21BA1BC64C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeServer.Core.UnitTest", "..\MergeServer.Core.UnitTest\MergeServer.Core.UnitTest.csproj", "{8DDC48F8-FDA4-40B5-B9FC-C47852B223F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeServer.Core.API", "..\MergeServer.Core.API\MergeServer.Core.API.csproj", "{6F0D69FB-D48C-49C7-838E-E4669FB95AEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3AAB1A5E-B613-4FB0-9A24-8E21BA1BC64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AAB1A5E-B613-4FB0-9A24-8E21BA1BC64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AAB1A5E-B613-4FB0-9A24-8E21BA1BC64C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DDC48F8-FDA4-40B5-B9FC-C47852B223F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDC48F8-FDA4-40B5-B9FC-C47852B223F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDC48F8-FDA4-40B5-B9FC-C47852B223F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDC48F8-FDA4-40B5-B9FC-C47852B223F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F0D69FB-D48C-49C7-838E-E4669FB95AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0D69FB-D48C-49C7-838E-E4669FB95AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0D69FB-D48C-49C7-838E-E4669FB95AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0D69FB-D48C-49C7-838E-E4669FB95AEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
